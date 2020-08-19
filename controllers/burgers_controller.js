@@ -24,14 +24,14 @@ router.put("/:id", function (req, res) {
   //var condition = "id = " + req.params.id;
   burger.updateOne([req.params.id], function (result) {
     console.log(result);
-    res.redirect("/");
+    res.redirect(303, "/");
   });
 });
 
 router.delete("/:id", function (req, res) {
   burger.deleteOne([req.params.id], function (result) {
     console.log(result);
-    res.redirect("/");
+    res.redirect(303, "/");
   });
 });
 

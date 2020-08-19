@@ -16,7 +16,7 @@ $(function () {
       }
     );
   });
-  $(".form-group button").on("click", (event) => {
+  $(".form-group button").on("click", function (event) {
     event.preventDefault();
     const newBurger = {
       name: $("#burger").val().trim(),
@@ -32,7 +32,7 @@ $(function () {
       }
     );
   });
-  $(".delete").on("click", () => {
+  $(".delete").on("click", function () {
     const id = $(this).data("id");
     console.log("In Delete the id - " + id);
     $.ajax("/" + id, {
